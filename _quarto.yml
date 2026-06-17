@@ -6,40 +6,51 @@ book:
   title: "دليل أمانة السر الكشفية"
   subtitle: "منهجية موحّدة لأمناء السر في الكشاف المسلم"
   author: "القائد مصطفى خزعل"
-  cover-image: assets/images/cover.png
+  favicon: assets/images/cover.png
+  site-url: "https://muslimscoutbaalbeck.github.io/dallel_amanet_elser/"
+  repo-url: "https://github.com/MuslimScoutBaalbeck/dallel_amanet_elser"
   page-navigation: true
   search: true
-
+  sidebar:
+    style: docked
+    background: "#fbf4e6"
   chapters:
     - index.qmd
     - chapters/00-introduction.qmd
-    - chapters/01-chapter-one.qmd
-    - chapters/02-chapter-two.qmd
-    - chapters/appendices.qmd
+    - chapters/01-madkhal-amanat-al-sirr.qmd
+    - chapters/02-dawr-amin-al-sirr.qmd
+    - chapters/03-manhajiyat-waththiq.qmd
+    - chapters/04-idarat-al-ijtimaat.qmd
+    - chapters/05-mutabaat-al-qararat.qmd
+    - chapters/06-al-sijillat.qmd
+    - chapters/07-al-murasalat.qmd
+    - chapters/08-al-archafa.qmd
+    - chapters/09-al-adawat-al-raqamiya.qmd
+    - chapters/10-amanat-al-sirr-fil-mufawadiya.qmd
+    - chapters/11-amanat-al-sirr-fil-fawj.qmd
+    - chapters/12-hawkama-sirriya-jawda.qmd
+    - chapters/13-taslim-istilam.qmd
+    - chapters/14-qawalib-rasmiya.qmd
+    - chapters/15-tadrib-itimad.qmd
+    - chapters/99-appendices.qmd
 
 format:
   html:
-    theme: cosmo
+    theme:
+      light: cosmo
     toc: true
+    toc-depth: 3
     number-sections: false
-    page-navigation: true
-    dir: rtl
     lang: ar
+    dir: rtl
+    page-layout: full
     css:
       - styles/rtl.css
       - styles/book-design.css
+    include-after-body: styles/fix-nav.html
+    code-fold: false
+    anchor-sections: true
 
-  pdf:
-    pdf-engine: xelatex
-    toc: true
-    number-sections: true
-    documentclass: book
-    papersize: a4
-    mainfont: "Tajawal"
-    sansfont: "Tajawal"
-    monofont: "Courier New"
-    include-in-header: styles/arabic-pdf.tex
-
-  docx:
-    toc: true
-    number-sections: true
+# PDF is intentionally disabled in the default workflow because Arabic RTL PDF
+# via LaTeX can conflict with bidi/polyglossia on newer TeX distributions.
+# Use the HTML output for GitHub Pages and export PDF later from browser/Affinity if needed.

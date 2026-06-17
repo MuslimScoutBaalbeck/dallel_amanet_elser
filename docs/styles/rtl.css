@@ -1,18 +1,13 @@
-html,
-body {
+html, body {
   direction: rtl;
   text-align: right;
 }
 
-.sidebar,
-.sidebar-navigation,
-#TOC,
-nav {
+.sidebar, .sidebar-navigation, #TOC, nav, .quarto-title-meta {
   direction: rtl;
   text-align: right;
 }
 
 .quarto-title-meta {
-  direction: rtl;
   text-align: center;
 }

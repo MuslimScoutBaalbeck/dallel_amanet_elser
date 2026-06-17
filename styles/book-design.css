@@ -1,86 +1,196 @@
-/* =========================
-   General Arabic Book Design
-   ========================= */
-
 @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap');
 
 :root {
   --ms-green: #143d32;
   --ms-green-2: #1f5a48;
   --ms-gold: #c9a24a;
+  --ms-gold-2: #e6c875;
   --ms-cream: #fbf4e6;
   --ms-paper: #fffaf0;
   --ms-text: #263238;
   --ms-muted: #6b7280;
+  --ms-border: rgba(201, 162, 74, 0.35);
 }
 
-html,
-body {
+html, body {
   direction: rtl;
   text-align: right;
-  font-family: "Tajawal", system-ui, sans-serif;
+  font-family: "Tajawal", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   background:
-    radial-gradient(circle at top right, rgba(201, 162, 74, 0.12), transparent 35%),
-    linear-gradient(180deg, #fffaf0 0%, #f7efe0 100%);
+    radial-gradient(circle at top right, rgba(201, 162, 74, .14), transparent 33%),
+    radial-gradient(circle at bottom left, rgba(20, 61, 50, .10), transparent 30%),
+    linear-gradient(180deg, #fffaf0 0%, #f6edda 100%);
   color: var(--ms-text);
   line-height: 1.95;
 }
 
-/* Main content width */
-main.content {
-  max-width: 980px;
-  background: rgba(255, 250, 240, 0.92);
-  border: 1px solid rgba(201, 162, 74, 0.22);
-  border-radius: 22px;
-  padding: 2.2rem 2.6rem;
-  box-shadow: 0 18px 45px rgba(20, 61, 50, 0.08);
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  opacity: .12;
+  background-image:
+    linear-gradient(45deg, transparent 48%, rgba(201,162,74,.28) 49%, rgba(201,162,74,.28) 51%, transparent 52%),
+    linear-gradient(-45deg, transparent 48%, rgba(201,162,74,.18) 49%, rgba(201,162,74,.18) 51%, transparent 52%);
+  background-size: 42px 42px;
+  z-index: -1;
 }
 
-/* Titles */
-h1, h2, h3, h4 {
+main.content {
+  max-width: 1040px;
+  margin-inline: auto;
+  background: rgba(255, 250, 240, 0.94);
+  border: 1px solid var(--ms-border);
+  border-radius: 28px;
+  padding: 2.6rem 3rem;
+  box-shadow: 0 24px 70px rgba(20, 61, 50, 0.12);
+}
+
+.cover-page {
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+.cover-image {
+  max-width: min(560px, 86vw);
+  width: 100%;
+  border-radius: 28px;
+  box-shadow: 0 30px 90px rgba(20, 61, 50, .22);
+  border: 1px solid var(--ms-border);
+}
+
+.cover-title,
+.cover-subtitle {
+  display: none;
+}
+
+.cover-meta {
+  margin: 1.5rem auto 0;
+  display: inline-block;
+  padding: .8rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(20, 61, 50, .08);
+  border: 1px solid var(--ms-border);
+  color: var(--ms-green);
+}
+
+h1, h2, h3, h4, h5 {
   font-family: "Tajawal", system-ui, sans-serif;
   color: var(--ms-green);
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: -0.02em;
 }
 
 h1 {
-  font-size: 2.35rem;
-  border-bottom: 3px solid var(--ms-gold);
-  padding-bottom: 0.7rem;
+  font-size: clamp(2rem, 4vw, 3rem);
+  border-bottom: 5px double var(--ms-gold);
+  padding-bottom: .8rem;
   margin-bottom: 1.6rem;
 }
 
 h2 {
-  margin-top: 2.2rem;
-  font-size: 1.75rem;
+  font-size: clamp(1.55rem, 3vw, 2.15rem);
+  margin-top: 2.6rem;
+  padding: .55rem 1rem;
+  background: linear-gradient(90deg, rgba(201,162,74,.20), transparent 70%);
+  border-right: 7px solid var(--ms-gold);
+  border-radius: 14px;
 }
 
 h3 {
   color: var(--ms-green-2);
-  font-size: 1.35rem;
+  font-size: 1.42rem;
+  margin-top: 1.8rem;
 }
 
-/* Paragraphs */
+p, li {
+  font-size: 1.09rem;
+}
+
 p {
-  font-size: 1.08rem;
+  margin-bottom: .85rem;
 }
 
-/* Links */
 a {
   color: var(--ms-green-2);
-  text-decoration-color: rgba(201, 162, 74, 0.7);
+  text-decoration-color: rgba(201, 162, 74, .72);
   text-underline-offset: 4px;
 }
 
 a:hover {
-  color: var(--ms-gold);
+  color: #956f1e;
 }
 
-/* Sidebar */
-.sidebar,
-.sidebar-navigation,
-.sidebar-menu-container {
+img {
+  border-radius: 20px;
+  box-shadow: 0 16px 38px rgba(20, 61, 50, .14);
+}
+
+.chapter-hero {
+  width: min(620px, 90%);
+  display: block;
+  margin: 0 auto 2.2rem;
+  border-radius: 28px;
+  border: 1px solid var(--ms-border);
+}
+
+.rule-box,
+.admin-note,
+.tip-box {
+  border: 1px solid var(--ms-border);
+  border-right: 8px solid var(--ms-green);
+  background: linear-gradient(135deg, rgba(255, 255, 255, .88), rgba(255, 248, 232, .9));
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  margin: 1.6rem 0;
+}
+
+.rule-box::before {
+  content: "قاعدة عملية";
+  display: inline-block;
+  font-weight: 900;
+  color: var(--ms-green);
+  background: rgba(201,162,74,.18);
+  border: 1px solid var(--ms-border);
+  border-radius: 999px;
+  padding: .15rem .8rem;
+  margin-bottom: .55rem;
+}
+
+blockquote {
+  border-right: 6px solid var(--ms-gold);
+  border-left: none;
+  background: rgba(255, 255, 255, .64);
+  padding: 1rem 1.25rem;
+  border-radius: 16px;
+}
+
+.callout {
+  border-radius: 16px;
+  border-right: 7px solid var(--ms-gold);
+  border-left: none;
+}
+
+table {
+  direction: rtl;
+  text-align: right;
+  width: 100%;
+  background: white;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+thead {
+  background: var(--ms-green);
+  color: white;
+}
+
+th, td {
+  padding: .75rem .85rem;
+}
+
+.sidebar, .sidebar-navigation, .sidebar-menu-container, .sidebar-title, #TOC {
   direction: rtl;
   text-align: right;
   font-family: "Tajawal", system-ui, sans-serif;
@@ -91,81 +201,9 @@ a:hover {
   font-weight: 900;
 }
 
-.sidebar-item-text,
-.sidebar-link {
+.sidebar-item-text, .sidebar-link {
   text-align: right;
 }
-
-/* TOC */
-#TOC,
-.sidebar nav[role="doc-toc"] {
-  direction: rtl;
-  text-align: right;
-  font-family: "Tajawal", system-ui, sans-serif;
-}
-
-/* Tables */
-table {
-  direction: rtl;
-  text-align: right;
-  width: 100%;
-}
-
-thead {
-  background: var(--ms-green);
-  color: white;
-}
-
-th, td {
-  padding: 0.75rem;
-}
-
-/* Callouts */
-.callout {
-  border-radius: 16px;
-  border-right: 6px solid var(--ms-gold);
-  border-left: none;
-  background: rgba(255, 255, 255, 0.72);
-}
-
-/* Images */
-img {
-  border-radius: 18px;
-  box-shadow: 0 14px 35px rgba(20, 61, 50, 0.14);
-}
-
-.figure-img {
-  margin: 1rem auto;
-}
-
-/* Cover / title area */
-.quarto-title-block {
-  direction: rtl;
-  text-align: center;
-  background:
-    linear-gradient(135deg, rgba(20, 61, 50, 0.94), rgba(31, 90, 72, 0.92)),
-    radial-gradient(circle at top left, rgba(201, 162, 74, 0.35), transparent 45%);
-  color: white;
-  border-radius: 26px;
-  padding: 3rem 2rem;
-  margin-bottom: 2.5rem;
-  box-shadow: 0 22px 55px rgba(20, 61, 50, 0.22);
-}
-
-.quarto-title-block h1,
-.quarto-title-block .title {
-  color: white;
-  border-bottom: none;
-}
-
-.quarto-title-block .subtitle {
-  color: #f6e4b6;
-  font-size: 1.3rem;
-}
-
-/* =========================
-   Fix Quarto bottom arrows RTL
-   ========================= */
 
 .nav-page {
   direction: rtl;
@@ -175,7 +213,7 @@ img {
   gap: 2rem;
   margin-top: 4rem;
   padding-top: 2rem;
-  border-top: 1px solid rgba(20, 61, 50, 0.14);
+  border-top: 1px solid rgba(20, 61, 50, .14);
 }
 
 .nav-page a {
@@ -188,47 +226,23 @@ img {
   color: var(--ms-green);
 }
 
-/* Flip Bootstrap icons used by Quarto navigation */
 .nav-page .bi-arrow-left,
 .nav-page .bi-arrow-right {
   transform: scaleX(-1);
 }
 
-/* Better spacing for Arabic nav text */
-.nav-page-previous,
-.nav-page-next {
-  display: flex;
-  align-items: center;
-  gap: 0.65rem;
-}
+.nav-page-previous { order: 2; }
+.nav-page-next { order: 1; }
 
-/* Optional: make previous appear right and next appear left in RTL */
-.nav-page-previous {
-  order: 2;
-}
-
-.nav-page-next {
-  order: 1;
-}
-
-/* Mobile */
 @media (max-width: 768px) {
   main.content {
-    padding: 1.4rem;
-    border-radius: 16px;
+    padding: 1.35rem;
+    border-radius: 18px;
   }
-
-  h1 {
-    font-size: 1.8rem;
-  }
-
+  h1 { font-size: 1.85rem; }
+  h2 { font-size: 1.45rem; }
   .nav-page {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .nav-page-previous,
-  .nav-page-next {
-    justify-content: space-between;
   }
 }

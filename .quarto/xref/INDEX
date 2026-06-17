@@ -13,5 +13,53 @@
   },
   "chapters/appendices.qmd": {
     "appendices.html": "9f76e21a"
+  },
+  "chapters/01-madkhal-amanat-al-sirr.qmd": {
+    "01-madkhal-amanat-al-sirr.html": "9b21365b"
+  },
+  "chapters/02-dawr-amin-al-sirr.qmd": {
+    "02-dawr-amin-al-sirr.html": "a1d7c3df"
+  },
+  "chapters/03-manhajiyat-waththiq.qmd": {
+    "03-manhajiyat-waththiq.html": "47259e28"
+  },
+  "chapters/04-idarat-al-ijtimaat.qmd": {
+    "04-idarat-al-ijtimaat.html": "2bb2f4ed"
+  },
+  "chapters/05-mutabaat-al-qararat.qmd": {
+    "05-mutabaat-al-qararat.html": "06f46a3c"
+  },
+  "chapters/06-al-sijillat.qmd": {
+    "06-al-sijillat.html": "2103363d"
+  },
+  "chapters/07-al-murasalat.qmd": {
+    "07-al-murasalat.html": "fd1789d1"
+  },
+  "chapters/08-al-archafa.qmd": {
+    "08-al-archafa.html": "ba4f926f"
+  },
+  "chapters/09-al-adawat-al-raqamiya.qmd": {
+    "09-al-adawat-al-raqamiya.html": "9cd10ca5"
+  },
+  "chapters/10-amanat-al-sirr-fil-mufawadiya.qmd": {
+    "10-amanat-al-sirr-fil-mufawadiya.html": "889c4392"
+  },
+  "chapters/11-amanat-al-sirr-fil-fawj.qmd": {
+    "11-amanat-al-sirr-fil-fawj.html": "d9f56bf5"
+  },
+  "chapters/12-hawkama-sirriya-jawda.qmd": {
+    "12-hawkama-sirriya-jawda.html": "e713aa7e"
+  },
+  "chapters/13-taslim-istilam.qmd": {
+    "13-taslim-istilam.html": "d3e11138"
+  },
+  "chapters/14-qawalib-rasmiya.qmd": {
+    "14-qawalib-rasmiya.html": "952fefa2"
+  },
+  "chapters/15-tadrib-itimad.qmd": {
+    "15-tadrib-itimad.html": "33e5e250"
+  },
+  "chapters/99-appendices.qmd": {
+    "99-appendices.html": "004c3a3f"
   }
 }

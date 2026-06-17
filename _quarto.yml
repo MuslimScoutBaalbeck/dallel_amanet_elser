@@ -1,0 +1,45 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "دليل أمانة السر الكشفية"
+  subtitle: "منهجية موحّدة لأمناء السر في الكشاف المسلم"
+  author: "القائد مصطفى خزعل"
+  cover-image: assets/images/cover.png
+  page-navigation: true
+  search: true
+
+  chapters:
+    - index.qmd
+    - chapters/00-introduction.qmd
+    - chapters/01-chapter-one.qmd
+    - chapters/02-chapter-two.qmd
+    - chapters/appendices.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    number-sections: false
+    page-navigation: true
+    dir: rtl
+    lang: ar
+    css:
+      - styles/rtl.css
+      - styles/book-design.css
+
+  pdf:
+    pdf-engine: xelatex
+    toc: true
+    number-sections: true
+    documentclass: book
+    papersize: a4
+    mainfont: "Tajawal"
+    sansfont: "Tajawal"
+    monofont: "Courier New"
+    include-in-header: styles/arabic-pdf.tex
+
+  docx:
+    toc: true
+    number-sections: true

@@ -1,0 +1,17 @@
+{
+  "chapters/00-introduction.qmd": {
+    "00-introduction.html": "d0b3c38a"
+  },
+  "index.qmd": {
+    "index.html": "b9ad9aa4"
+  },
+  "chapters/01-chapter-one.qmd": {
+    "01-chapter-one.html": "b47f386f"
+  },
+  "chapters/02-chapter-two.qmd": {
+    "02-chapter-two.html": "cd6bf433"
+  },
+  "chapters/appendices.qmd": {
+    "appendices.html": "9f76e21a"
+  }
+}
